@@ -38,7 +38,7 @@ namespace DMav
             // 
             this.cmtwButton.Location = new System.Drawing.Point(11, 12);
             this.cmtwButton.Name = "cmtwButton";
-            this.cmtwButton.Size = new System.Drawing.Size(173, 23);
+            this.cmtwButton.Size = new System.Drawing.Size(225, 23);
             this.cmtwButton.TabIndex = 3;
             this.cmtwButton.TabStop = false;
             this.cmtwButton.Text = "Convert MP3 to WAV";
@@ -49,7 +49,7 @@ namespace DMav
             // 
             this.cwtmButton.Location = new System.Drawing.Point(11, 41);
             this.cwtmButton.Name = "cwtmButton";
-            this.cwtmButton.Size = new System.Drawing.Size(173, 23);
+            this.cwtmButton.Size = new System.Drawing.Size(225, 23);
             this.cwtmButton.TabIndex = 4;
             this.cwtmButton.TabStop = false;
             this.cwtmButton.Text = "Convert WAV to MP3";
@@ -60,7 +60,7 @@ namespace DMav
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(196, 76);
+            this.ClientSize = new System.Drawing.Size(248, 76);
             this.Controls.Add(this.cwtmButton);
             this.Controls.Add(this.cmtwButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
