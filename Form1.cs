@@ -14,40 +14,13 @@ namespace DMav
             InitializeComponent();
         }
 
-        BlockAlignReductionStream stream = null;
-        DirectSoundOut output = null;
-
-        private void DisposeAudio()
-        {
-            if (output != null)
-            {
-                if (output.PlaybackState == PlaybackState.Playing)
-                {
-                    output.Stop();
-                }
-                output.Dispose();
-                output = null;
-            }
-
-            if (stream != null)
-            {
-                stream.Dispose();
-                stream = null;
-            }
-        }
-
-        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            DisposeAudio();
-        }
-
         private void cmtw_Click(object sender, EventArgs e)
         {
             OpenFileDialog open = new OpenFileDialog();
             open.Filter = "MP3 File (*.mp3)|*.mp3";
             if (open.ShowDialog() != DialogResult.OK) return;
 
-            DisposeAudio();
+            open.Dispose();
 
             SaveFileDialog save = new SaveFileDialog();
             save.Filter = "WAV File (*.wav)|*.wav";
@@ -68,6 +41,8 @@ namespace DMav
             };
 
             Process.Start(startInfo);
+
+            save.Dispose();
         }
 
         private void cwtmButton_Click(object sender, EventArgs e)
@@ -76,7 +51,7 @@ namespace DMav
             open.Filter = "WAV File (*.wav)|*.wav";
             if (open.ShowDialog() != DialogResult.OK) return;
 
-            DisposeAudio();
+            open.Dispose();
 
             SaveFileDialog save = new SaveFileDialog();
             save.Filter = "MP3 File (*.mp3)|*.mp3";
@@ -97,6 +72,8 @@ namespace DMav
             };
 
             Process.Start(startInfo);
+
+            save.Dispose();
         }
     }
 }
